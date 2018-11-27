@@ -8,7 +8,7 @@
 <body>
     <?php
     require_once("connect.php");
-    $sql = "USER cguan3_1;";
+    $sql = "USE cguan3_1;";
     if (!$result = $mysqli->query($sql)) {
         echo "Database fails to select";
         echo"<br>\n";
