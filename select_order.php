@@ -6,7 +6,14 @@
     <title>Show order</title>
 </head>
 <body>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    Order ID: <input type="text" name="orderID"> <br>
+    <input type="submit" value="Submit">
+    </form>
+
     <?php
+    $orderID = $_POST["orderID"];
+    $selected = "";
     require_once("connect.php");
     $sql = "USE cguan3_1;";
     if (!$result = $mysqli->query($sql)) {
@@ -15,7 +22,7 @@
         echo $mysqli->error . "\n";
     }
     
-    $sql = "SELECT * FROM Order_History;";    
+    $sql = "SELECT $orderID FROM Order_History;";    
     if (!$result = $mysqli->query($sql)) {
         // Oh no! The query failed. 
         echo "Sorry, the website is experiencing problems.";
@@ -30,10 +37,8 @@
     }
     else {
         $arr = $result->fetch_assoc();
-        for ($i = 0; $i < count($arr); $i++) {
-            echo $arr[$i];
-            echo "<br>";
-        }
+        $selected = $arr[0];
+        echo $selected;
     }
 
     $mysqli->close();

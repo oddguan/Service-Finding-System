@@ -9,7 +9,8 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <a href="show_order.php">show order </a>
-    <a href="insert_order.php">insert order </a>
+    <a href="show_order.php">show order </a> <br>
+    <a href="insert_order.php">insert order </a> <br>
+    <a href="select_order.php">select order </a> <br>
 </body>
 </html>
