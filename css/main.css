@@ -3,6 +3,6 @@ body{
     font-family: 'Ranga', cursive;
 }
 
-.welcome_headline {
+#welcome_headline {
     text-align: center;
 }
