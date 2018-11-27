@@ -13,7 +13,7 @@
     }
     else {
         echo "rows got:" . $result->num_rows;
-        $arr = $mysqli->fetch_assoc();
+        // $arr = $mysqli->fetch_assoc();
         while ($row = $result->fetch_assoc()) {
             echo $row['orderID'];
         }
