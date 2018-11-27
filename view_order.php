@@ -9,9 +9,8 @@
     }
     else {
         $arr = $mysqli->fetch_assoc();
-        for ($i=0; $i<count($arr); $i++) {
-            echo $arr[$i];
-            echo "<br>\n";
+        while ($row = $result->fetch_assoc()) {
+            echo $row;
         }
     }
 ?>
