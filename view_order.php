@@ -8,6 +8,6 @@
         echo $mysqli->error . "\n";
     }
     else {
-        echo $result;
+        echo $mysqli->fetch_assoc();
     }
 ?>
