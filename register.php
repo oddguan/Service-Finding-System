@@ -20,8 +20,7 @@
         <br><br>
         First Name: <input type="text" name="firstName"> &nbsp;
         <span class="error">* <?php echo $firstNameErr;?></span>
-        M.I.: <input type="text" name="MI">
-        <span class="error">* <?php echo $MIErr;?></span> &nbsp;
+        M.I.: <input type="text" name="MI" size=8>
         Last Name: <input type="text" name="firstName">
         <span class="error">* <?php echo $lastNameErr;?></span>
         <br><br>
@@ -57,6 +56,8 @@
             $password_2 = test_input($_POST["password_2"]);
         }
 
+        $phoneNumber = test_input($_POST["phoneNumber"]);
+
         if (empty($_POST["password"])) {
             $passwordErr = "Password is required";
         }
@@ -71,6 +72,8 @@
             $firstName = test_input($_POST["firstName"]);
         }
 
+        $MI = test_input($_POST["MI"]);
+
         if (empty($_POST["lastName"])) {
             $firstNameErr = "Last name is required";
         }
@@ -78,9 +81,15 @@
             $firstName = test_input($_POST["lastName"]);
         }
     }
-    // echo $account;
-    // echo $password;
-
+    $sql = "INSERT INTO Registration VALUES (\"$account\",\"$password\",NOW(),\"$phoneNumber\",\"$firstName\",\"$MI\",\"$lastName\")";
+    $result = $mysqli->query($sql);
+    if (!$result) {
+        echo $result->error;
+    }
+    else {
+        echo "Registered Sucessfully.";
+    }
+    
     function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
