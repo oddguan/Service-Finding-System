@@ -10,7 +10,7 @@
     else {
         $arr = $mysqli->fetch_assoc();
         while ($row = $result->fetch_assoc()) {
-            echo $row;
+            echo $row['orderID'];
         }
     }
 ?>
