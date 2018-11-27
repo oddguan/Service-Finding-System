@@ -13,4 +13,6 @@ echo "Connected Successfully.";
 echo "<br>\n";
 $sql = "USER cguan3_1;";
 $mysqli->query($sql);
+echo "Database Selected";
+echo"<br>\n";
 ?>
