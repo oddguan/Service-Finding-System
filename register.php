@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Register New Account</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/register.css" />
+    <link rel="stylesheet" type="text/css" href="css/register.css">
 </head>
 <body>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
@@ -78,8 +78,8 @@
             $firstName = test_input($_POST["lastName"]);
         }
     }
-    echo $account;
-    echo $password;
+    // echo $account;
+    // echo $password;
 
     function test_input($data) {
         $data = trim($data);
