@@ -50,7 +50,7 @@ create table Order_History(
     payment DOUBLE(100,2),
 
     primary key (orderID),
-    foreign key (supplier_account) references Supply(account),
-    foreign key (demander_account) references Demand(account)
+    foreign key (supplier_account) references Registration(account),
+    foreign key (demander_account) references Registration(account)
 );
 
