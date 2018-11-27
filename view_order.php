@@ -12,6 +12,7 @@
         echo $mysqli->error . "\n";
     }
     else {
+        echo "rows got:" . $result->num_rows;
         $arr = $mysqli->fetch_assoc();
         while ($row = $result->fetch_assoc()) {
             echo $row['orderID'];
