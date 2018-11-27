@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,6 +6,7 @@
     <title>CSC261 Project01</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
 </head>
 <body>
     <a href="register.php">register new account</a>
@@ -14,6 +15,5 @@
     <?php
     require_once("connect.php");
     ?>
-
 </body>
 </html>
