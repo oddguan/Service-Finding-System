@@ -33,6 +33,8 @@
             exit;
         }
         else {
+            echo $result;
+            echo "Selected successfully.";
             $arr = $result->fetch_assoc();
             $selected = $arr[0];
             echo $selected;
