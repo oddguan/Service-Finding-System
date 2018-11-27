@@ -8,6 +8,10 @@
         echo $mysqli->error . "\n";
     }
     else {
-        echo $mysqli->fetch_assoc();
+        $arr = $mysqli->fetch_assoc();
+        for ($i=0; $i<count($arr); $i++) {
+            echo $arr[$i];
+            echo "<br>\n";
+        }
     }
 ?>
