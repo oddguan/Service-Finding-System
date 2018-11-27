@@ -85,11 +85,15 @@
     $result = $mysqli->query($sql);
     if (!$result) {
         echo $result->error;
+        echo "error!";
     }
     else {
         echo "Registered Sucessfully.";
+        echo $account;
+        echo $password;
     }
-    
+
+
     function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
