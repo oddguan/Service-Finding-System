@@ -29,8 +29,11 @@
         exit;
     }
     else {
-        $r = $result->fetch_assoc();
-        echo $r;
+        $arr = $result->fetch_assoc();
+        for ($i = 0; $i < count($arr); $i++) {
+            echo $arr[$i];
+            echo "<br>";
+        }
     }
     ?>
 </body>
