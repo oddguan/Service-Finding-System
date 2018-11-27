@@ -22,7 +22,7 @@
         echo $mysqli->error . "\n";
     }
     if (!empty($orderID)) {
-        $sql = "SELECT * FROM Order_History WHERE orderID = $orderID;";    
+        $sql = "SELECT * FROM Order_History WHERE orderID = \"$orderID;\"";    
         if (!$result = $mysqli->query($sql)) {
             // Oh no! The query failed. 
             echo "Sorry, the website is experiencing problems.";
