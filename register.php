@@ -3,25 +3,89 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register New Account</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/register.css" />
 </head>
 <body>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+        Account: <input type="text" name="account">
+        <span class="error">* <?php echo $accountErr;?></span>
+        <br><br>
+        Password: <input type="text" name="password">
+        <br><br>
+        Retype Password: <input type="text" name="password_2">
+        <span class="error">* <?php echo $passwordErr;?></span>
+        <br><br>
+        Phone Number: <input type="text" name="phoneNumber">
+        <br><br>
+        First Name: <input type="text" name="firstName"> &nbsp;
+        <span class="error">* <?php echo $firstNameErr;?></span>
+        M.I.: <input type="text" name="MI">
+        <span class="error">* <?php echo $MIErr;?></span> &nbsp;
+        Last Name: <input type="text" name="firstName">
+        <span class="error">* <?php echo $lastNameErr;?></span>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
     <?php
-    $sql = "USE cguan3_1;";
     require_once("connect.php");
-    if ($conn->query($sql) === TRUE) {
-        echo "Database found";
-    }
-    else {
-        echo "Database not found";
+    $accountErr = $passwordErr = $phoneNumberErr = $firstNameErr = $lastNameErr = $MIErr = "";
+    $account = $password = $password_2 = $phoneNumber = $firstName = $MI = $firstName = "";
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($_POST["account"])) {
+            $accountErr = "Account is required";
+        } 
+        else {
+            $account = test_input($_POST["account"]);
+            if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+                $nameErr = "Only letters and white space allowed"; 
+            }
+        }
+
+        if (empty($_POST["password"])) {
+            $passwordErr = "Password is required";
+        }
+        else {
+            $password = test_input($_POST["password"]);
+        }
+
+        if (empty($_POST["password_2"])) {
+            $passwordErr = "Password confirmation is required";
+        }
+        else {
+            $password_2 = test_input($_POST["password_2"]);
+        }
+
+        if (empty($_POST["password"])) {
+            $passwordErr = "Password is required";
+        }
+        else {
+            $password = test_input($_POST["password"]);
+        }
+
+        if (empty($_POST["firstName"])) {
+            $firstNameErr = "First name is required";
+        }
+        else {
+            $firstName = test_input($_POST["firstName"]);
+        }
+
+        if (empty($_POST["lastName"])) {
+            $firstNameErr = "Last name is required";
+        }
+        else {
+            $firstName = test_input($_POST["lastName"]);
+        }
     }
 
-    $input1 = $_POST["input1"];
-    $input2 = $_POST["input2"];
-    echo $input1;
-    echo $input2;
-    $sql.close();
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
     ?>
 </body>
 </html>
+
