@@ -17,7 +17,7 @@
             echo $row['end_time'] . "<br>";
             echo $row['payment'] . "<br>";
             echo $row['special_requirement'] . "<br>";
-            echo "<br><br><br>";
+            echo "<br><br>";
         }
     }
 ?>
