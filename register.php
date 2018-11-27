@@ -78,6 +78,8 @@
             $firstName = test_input($_POST["lastName"]);
         }
     }
+    echo $account;
+    echo $password;
 
     function test_input($data) {
         $data = trim($data);
