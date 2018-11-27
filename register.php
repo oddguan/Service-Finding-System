@@ -1,4 +1,4 @@
-<!doctype <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,8 +8,8 @@
 </head>
 <body>
     <?php
-    require_once("connect.php")
     $sql = "USE cguan3_1;";
+    require_once("connect.php");
     if ($conn->query($sql) === TRUE) {
         echo "Database found";
     }
