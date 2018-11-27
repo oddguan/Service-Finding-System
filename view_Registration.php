@@ -2,7 +2,7 @@
     require_once("connect.php");
     $sql = "USE cguan3_1;";
     $result = $mysqli->query($sql);
-    $sql = "SELECT * FROM Demand;";
+    $sql = "SELECT * FROM Registration;";
     if (!$result = $mysqli->query($sql)) {
         echo "Error" . "<br>\n";
         echo $mysqli->error . "\n";
