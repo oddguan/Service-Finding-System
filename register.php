@@ -110,6 +110,7 @@
         return $data;
     }
     ?>
+    <a href="index.html">back to home page</a>
 </body>
 </html>
 
