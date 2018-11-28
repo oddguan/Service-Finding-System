@@ -82,10 +82,17 @@
         }
     }
     $sql = "INSERT INTO Registration VALUES (\"$account\",\"$password\",NOW(),\"$phoneNumber\",\"$firstName\",\"$MI\",\"$lastName\")";
-    $result = $mysqli->query($sql);
-    if (!$result) {
-        echo $result->error;
-        echo "error!";
+    if (!$result = $mysqli->query($sql)) {
+        // Oh no! The query failed. 
+        echo "Sorry, the website is experiencing problems. <br>";
+    
+        // Again, do not do this on a public site, but we'll show you how
+        // to get the error information
+        echo "Error: Our query failed to execute and here is why: <br>\n";
+        echo "Query: " . $sql . "<br>\n";
+        echo "Errno: " . $mysqli->errno . "<br>\n";
+        echo "Error: " . $mysqli->error . "<br>\n";
+        exit;
     }
     else {
         echo "Registered Sucessfully.";
