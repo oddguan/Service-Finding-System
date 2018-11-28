@@ -81,6 +81,8 @@
             $firstName = test_input($_POST["lastName"]);
         }
     }
+    $sql = "USE cguan3_1;";
+    $result = $mysqli->query($sql);
     $sql = "INSERT INTO Registration VALUES (\"$account\",\"$password\",NOW(),\"$phoneNumber\",\"$firstName\",\"$MI\",\"$lastName\")";
     if (!$result = $mysqli->query($sql)) {
         // Oh no! The query failed. 
