@@ -61,7 +61,7 @@ echo "Nothing to display";
     </table>
 
 <?php
-$conn->close();
+$mysqli->close();
 ?>
 
 </body>
