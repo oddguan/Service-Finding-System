@@ -21,7 +21,7 @@ if ($conn->query($sql) === TRUE) {
    echo "Error using  database: " . $conn->error;
 }
 // Query:
-$sql = "SELECT * FROM Students";
+$sql = "SELECT * FROM Registration;";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
 
