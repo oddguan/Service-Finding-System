@@ -9,7 +9,6 @@ if ($conn->connect_error) {
     die("Connection Failed: " . $mysqli->connect_error);
 }
 
-echo "Connected Successfully.";
-echo "<br>\n";
-$sql = "USER cguan3_1;";
+// echo "Connected Successfully.";
+// echo "<br>\n";
 ?>
