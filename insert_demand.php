@@ -54,8 +54,8 @@
         }
         else {
             echo "Inserted Demand Sucessfully.";
-            echo $account;
-            echo $password;
+            // echo $account;
+            // echo $password;
         }
     }
     function test_input($data) {
