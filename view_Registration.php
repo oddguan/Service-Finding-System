@@ -14,15 +14,16 @@
 <body>
 
 <?php
+require_once("connect.php");
 $sql = "USE cguan3_1;";
-if ($conn->query($sql) === TRUE) {
+if ($mysqli->query($sql) === TRUE) {
    // echo "using Database tbiswas2_company";
 } else {
-   echo "Error using  database: " . $conn->error;
+   echo "Error using  database: " . $mysqli->error;
 }
 // Query:
 $sql = "SELECT * FROM Registration;";
-$result = $conn->query($sql);
+$result = $mysqli->query($sql);
 if($result->num_rows > 0){
 
 ?>
