@@ -36,6 +36,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
             echo $sql;
             echo "Wrong password \n";
             echo $arr[0];
+            print_r($arr);
         }
         
         // if($user == "Ank" && $pass == "1234")  // username is  set to "Ank"  and Password   
