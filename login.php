@@ -15,7 +15,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
         require_once("connect.php");
         $sql = "USE cguan3_1";
         $result = $mysqli->query($sql);
-        $sql = "SELECT password FROM Registration WHERE account=\"" . $user . "\"";
+        $sql = "SELECT password FROM Registration WHERE account=\"" . $user . "\";";
         if (!$result = $mysqli->query($sql)) {
             echo "query wrong";
             echo "Query: " . $sql . "\n";

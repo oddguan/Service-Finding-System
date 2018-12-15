@@ -8,7 +8,7 @@
 <?php
       if(!isset($_SESSION['use'])) // If session is not set then redirect to Login Page
        {
-           header("Location:Login.php");  
+           header("Location:login.php");  
        }
 
           echo $_SESSION['use'];
