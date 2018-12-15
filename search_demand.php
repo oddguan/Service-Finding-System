@@ -44,9 +44,7 @@
         else {
             echo "Demand found <br>";
             $arr = $result->fetch_assoc();
-            foreach($arr as $element){
-                print_r($element . "<br><br>");
-            }
+            print_r($arr);
         }
     }
     function test_input($data) {
