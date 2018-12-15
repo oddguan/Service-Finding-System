@@ -33,7 +33,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 
         else {
             echo "Wrong password \n";
-            echo $arr;
+            echo $arr[0];
         }
         
         // if($user == "Ank" && $pass == "1234")  // username is  set to "Ank"  and Password   
