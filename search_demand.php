@@ -70,7 +70,7 @@
 	            <td><?php echo $row['payment']?></td>
   	            <td><?php echo $row['special_requirement']?></td>
                 <td>
-                    <form action="submit.php">
+                    <form method="get" action="submit.php">
                     <button type="submit" name="select" value="<?php print_r($row); ?>" onclick="select_input()">select</button>
                     </form>
                 </td>
@@ -82,7 +82,7 @@
     }
 
     function select_input() {
-        $result = $_GET['select'];
+        $result = $_GE['select'];
         $_SESSION['result'] = $result;
     }
 
