@@ -84,6 +84,7 @@
     function select_input() {
         if(!empty($result)){
             echo $result;
+            print_r($result);
         }
         else {
             $result = $_GET['select'];
