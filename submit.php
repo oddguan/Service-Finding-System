@@ -6,7 +6,9 @@
     <body>
         <?php
             echo "<h2>Service Successfully Selected!</h2><br>";
-            echo $_SESSION['result'];
+            $result = $_SESSION['result'];
+            echo $result;
+            print_r($result);
         ?>
     
     
