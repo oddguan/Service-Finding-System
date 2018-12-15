@@ -58,7 +58,6 @@
                 <th>Payment</th>
                 <th>Special Requirement</th>
             </tr>
-        </table>
 
         <?php
             while($row = $result->fetch_assoc()) { ?>
@@ -70,7 +69,7 @@
 	            <td><?php echo $row['payment']?></td>
   	            <td><?php echo $row['special_requirement']?></td>
             </tr>
-            
+            </table>
             <?php
             }
         }
