@@ -26,7 +26,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
         if (empty($arr)) {
             echo "Account does not exist \n";
         }
-        else if ($pass == $arr[0]["password"]) {
+        else if ($pass == $arr["password"]) {
             echo '<script type="text/javascript"> window.open("home.php","_self");</script>';
             $_SESSION['use'] = $user;
         }
@@ -35,7 +35,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
             echo $user . "\n";
             echo $sql;
             echo "Wrong password \n";
-            echo $arr[0]["password"];
+            echo $arr["password"];
             print_r($arr);
         }
         
