@@ -35,7 +35,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
             echo $user . "\n";
             echo $sql;
             echo "Wrong password \n";
-            echo $arr[0];
+            echo $arr[0]["password"];
             print_r($arr);
         }
         
