@@ -25,17 +25,17 @@
     require_once("connect.php");
     $service = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if ($_POST["service"] == "any") {
-            $service = "*";
-        }
-        else {
-            $service = $_POST['service'];
-        }
+        $service = $_POST['service'];
     }
     $sql = "USE cguan3_1;";
     $result = $mysqli->query($sql);
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $sql = "SELECT * FROM Demand WHERE service_type=\"" . $service .  "\";";
+        if ($_POST['service'] == "any") {
+            $sql = "SELECT * FROM Demand";
+        }
+        else {
+            $sql = "SELECT * FROM Demand WHERE service_type=\"" . $service .  "\";";
+        }
         if (!$result = $mysqli->query($sql)) {
             // Oh no! The query failed. 
             echo "Sorry, the website is experiencing problems. <br>";
