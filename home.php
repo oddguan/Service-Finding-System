@@ -24,8 +24,8 @@
         }
         else {
             echo "sucess";
-            $arr = $result.fetch_assoc();
-            print_r($arr);
+            // $arr = $result.fetch_assoc();
+            // print_r($arr);
         }
         echo "Login Success";
 
