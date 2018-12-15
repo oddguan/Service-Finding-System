@@ -69,7 +69,7 @@
 	            <td><?php echo $row['payment']?></td>
   	            <td><?php echo $row['special_requirement']?></td>
             </tr>
-            </table>
+            
             <?php
             }
         }
@@ -81,6 +81,7 @@
         return $data;
     }
     ?>
+    </table>
     
     
     </body>
