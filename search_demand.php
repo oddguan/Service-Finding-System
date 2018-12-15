@@ -45,7 +45,7 @@
             echo "Demand found <br>";
             $arr = $result->fetch_assoc();
             foreach($arr as $element){
-                echo $element . "<br><br>";
+                print_r($element . "<br><br>");
             }
         }
     }
