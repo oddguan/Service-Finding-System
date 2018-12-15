@@ -57,7 +57,7 @@
                 <th>End Time</th>
                 <th>Payment</th>
                 <th>Special Requirement</th>
-                <th>Select</th>
+                <th> </th>
             </tr>
 
         <?php
@@ -69,7 +69,7 @@
 	            <td><?php echo $row['end_time']?></td>
 	            <td><?php echo $row['payment']?></td>
   	            <td><?php echo $row['special_requirement']?></td>
-                <td><button type="button">select</button></td>
+                <td><input type="button" value="Select" onclick="submit.php"></td>
             </tr>
             
             <?php
