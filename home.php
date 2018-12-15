@@ -16,6 +16,7 @@
 
         $sql = "USE cguan3_1";
         $result = $mysqli->query($sql);
+        echo "database selected <br>";
         $sql = "SELECT * FROM Registration WHERE account =\"" . $_SESSION['use'] . "\";";
         if (!$result = $mysqli->query($sql)) {
             echo $mysql->error;
