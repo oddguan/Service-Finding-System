@@ -26,7 +26,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
         if (empty($arr)) {
             echo "Account does not exist \n";
         }
-        else if ($pass == $arr[0]) {
+        else if ($pass == $arr[0]["password"]) {
             echo '<script type="text/javascript"> window.open("home.php","_self");</script>';
             $_SESSION['use'] = $user;
         }
