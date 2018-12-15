@@ -71,12 +71,12 @@
   	            <td><?php echo $row['special_requirement']?></td>
                 <td>
                     <form method="get">
-                    <button type="submit" name="select" value="<?= $row ?>" onclick="<?php echo select_input(); ?>">select</button>
+                        <input type="button" name="test" id="test" value="<?= $row ?>">
                     </form>
                 </td>
             </tr>
             
-            <?php
+            <?php echo $_GET['test'];
             }
         }
     }
