@@ -70,9 +70,7 @@
 	            <td><?php echo $row['payment']?></td>
   	            <td><?php echo $row['special_requirement']?></td>
                 <td>
-                    <form method="post" action="submit.php" id="matchform">
-                        <button type="submit" form="matchform">select</button>
-                    </form>
+                    <button type="submit" name="select" value="<?php print_r($row); ?>" action="submit.php" onclick="select_input()">select</button>
                 </td>
             </tr>
             
@@ -80,6 +78,12 @@
             }
         }
     }
+
+    function select_input() {
+        $result = $_GET['select'];
+        $_SESSION['result'] = $result;
+    }
+
     function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
