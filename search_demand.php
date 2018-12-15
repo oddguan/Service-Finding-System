@@ -107,5 +107,7 @@
     ?>
     </table>
     
-    
+    <h3>
+        <a href="home.php">Back to homepage</a>
+    </h3>
     </body>
