@@ -10,16 +10,23 @@ if(isset($_SESSION['use']))   // Checking whether the session is already there o
 
 if(isset($_POST['login']))   // it checks whether the user clicked login button or not 
 {
-     $user = $_POST['user'];
-     $pass = $_POST['pass'];
+    $user = $_POST['user'];
+    $pass = $_POST['pass'];
+        require_once("connect.php");
+        $sql = "USE cguan3_1";
+        $result = $mysqli->query($sql);
+        $sql = "SELECT password FROM Registration WHERE account=" + $user;
+        $result = $mysqli->query($sql);
+        $arr = $result->fetch_assoc();
+        if (empty($arr)) {
+            echo "Account does not exist";
+        }
+        if($user == "Ank" && $pass == "1234")  // username is  set to "Ank"  and Password   
+        {                                   // is 1234 by default     
 
-      if($user == "Ank" && $pass == "1234")  // username is  set to "Ank"  and Password   
-         {                                   // is 1234 by default     
+        $_SESSION['use']=$user;
 
-          $_SESSION['use']=$user;
-
-
-         echo '<script type="text/javascript"> window.open("home.php","_self");</script>';            //  On Successful Login redirects to home.php
+        echo '<script type="text/javascript"> window.open("home.php","_self");</script>';            //  On Successful Login redirects to home.php
 
         }
 
@@ -28,7 +35,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
             echo "invalid UserName or Password";        
         }
 }
- ?>
+?>
 <html>
 <head>
 
