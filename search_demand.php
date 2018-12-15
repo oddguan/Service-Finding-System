@@ -2,14 +2,21 @@
 
 <html>
     <head>Search Demand</head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <body>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         What kind of service are you providing? : 
         <select name="service">
+            <option value="any">Any</option>
             <option value="House_Cleaning">House Cleaning</option>
             <option value="Lawn_Trimming">Lawn Trimming</option>
             <option value="Babysitting">Babysitting</option>
-            <option value="any">Any</option>
         </select>
         <input type="submit" value="Search">
     </form>
@@ -41,10 +48,31 @@
             echo "Error: " . $mysqli->error . "<br>\n";
             exit;
         }
-        else {
-            echo "Demand found <br>";
-            $arr = $result->fetch_assoc();
-            print_r($arr);
+        else { ?>
+        <table class="table table-striped">
+            <tr>
+                <th>Account</th>
+                <th>Service Type</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Payment</th>
+                <th>Special Requirement</th>
+            </tr>
+        </table>
+
+        <?php
+            while($row = $result->fetch_assoc()) { ?>
+            <tr>
+                <td><?php echo $row['account']?></td>
+                <td><?php echo $row['service_type']?></td>
+	            <td><?php echo $row['start_time']?></td>
+	            <td><?php echo $row['end_time']?></td>
+	            <td><?php echo $row['payment']?></td>
+  	            <td><?php echo $row['special_requirement']?></td>
+            </tr>
+            
+            <?php
+            }
         }
     }
     function test_input($data) {
