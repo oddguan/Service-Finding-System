@@ -64,7 +64,9 @@
         return $data;
     }
     ?>
-    <a href="index.html">back to home page</a>
+     <h3>
+        <a href="home.php">Back to homepage</a>
+    </h3>
 </body>
 </html>
 
