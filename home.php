@@ -37,6 +37,9 @@
 <a href="insert_demand.php">Post what a demand of service</a>
 <br>
 <br>
+<a href="search_supply.php">Search for a service supply</a>
+<br>
+<br>
 
 <h2>Supplier Utilities</h2>
 <a href="insert_supply.php">Post what kind of service are you supplying</a>
