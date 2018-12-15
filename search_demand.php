@@ -83,10 +83,12 @@
 
     function select_input() {
         if(!empty($result)){
+            echo "if";
             echo $result;
             print_r($result);
         }
         else {
+            echo 'else';
             $result = $_GET['select'];
             echo $result;
             $_SESSION['result'] = $result;
