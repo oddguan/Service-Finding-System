@@ -71,17 +71,19 @@
   	            <td><?php echo $row['special_requirement']?></td>
                 <td>
                     <form method="get">
-                        <input type="button" name="test" id="test" value="<?= $row ?>">
+                    <button type="submit" name="select" value="<?= $row ?>">select</button>
                     </form>
                 </td>
             </tr>
             
-            <?php echo $_GET['test'];
+            <?php
+            $_SESSION["select"] = $_GET["select"];
             }
         }
     }
 
     function select_input() {
+    
         if(!empty($result)){
             echo "if";
             echo $result;
