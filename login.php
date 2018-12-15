@@ -37,7 +37,8 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 </head>
 
 <body>
-
+    <h1>Welcome to Project 01</h1>
+    <h2>Please Login:</h2>
 <form action="" method="post">
 
     <table width="200" border="0">
@@ -55,6 +56,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
   </tr>
 </table>
 </form>
+<a href="register.php">Register New Account</a>
 
 </body>
 </html>
