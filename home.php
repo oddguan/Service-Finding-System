@@ -19,9 +19,11 @@
         echo "database selected <br>";
         $sql = "SELECT * FROM Registration WHERE account =\"" . $_SESSION['use'] . "\";";
         if (!$result = $mysqli->query($sql)) {
+            echo "error";
             echo $mysql->error;
         }
         else {
+            echo "sucess";
             $arr = $result.fetch_assoc();
             print_r($arr);
         }
