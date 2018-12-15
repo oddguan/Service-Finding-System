@@ -69,7 +69,11 @@
 	            <td><?php echo $row['end_time']?></td>
 	            <td><?php echo $row['payment']?></td>
   	            <td><?php echo $row['special_requirement']?></td>
-                <td><input type="button" value="Select" onclick="submit.php"></td>
+                <td>
+                    <form method="post" action="submit.php" id="matchform">
+                        <button type="submit" form="matchform">select</button>
+                    </form>
+                </td>
             </tr>
             
             <?php
