@@ -40,6 +40,8 @@
 
 <h2>Supplier Utilities</h2>
 <a href="insert_supply.php">Post what kind of service are you supplying</a>
+<br>
+<br>
 <a href="search_demand.php">Search for a service demand</a>
 </p>
 </body>
