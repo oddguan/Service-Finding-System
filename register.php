@@ -78,7 +78,7 @@
             $firstNameErr = "Last name is required";
         }
         else {
-            $firstName = test_input($_POST["lastName"]);
+            $lastName = test_input($_POST["lastName"]);
         }
     }
     $sql = "USE cguan3_1;";

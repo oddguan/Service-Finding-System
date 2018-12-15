@@ -31,5 +31,16 @@
 
         echo "<a href='logout.php'> Logout</a> "; 
 ?>
+
+<h2>Demander Utilities</h2>
+<br>
+<a href="insert_demand.php">Post what a demand of service</a>
+<br>
+<a href="search"
+<br>
+
+<h2>Supplier Utilities</h2>
+<a href="insert_supply.php">Post what kind of service are you supplying</a>
+<a href="search_demand.php">Search for a service demand</a>
 </body>
 </html>

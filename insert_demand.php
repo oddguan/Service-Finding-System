@@ -1,3 +1,5 @@
+<?php   session_start();  ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +10,9 @@
 </head>
 <body>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        Account: <input type="text" name="account">
-        <span class="error">* <?php echo $accountErr;?></span>
         <br><br>
         Service Type: <input type="text" name="serviceType">
+        <span class="error">* <?php echo $startTimeErr;?></span>
         <br><br>
         Start Time: <input type="text" name="startTime"> &nbsp;
         <span class="error">* <?php echo $startTimeErr;?></span>
@@ -29,7 +30,7 @@
     $accountErr = $startTimeErr = $paymentErr = "";
     $account = $serviceType = $startTime = $endTime = $payment = $specialRequirement  = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $account = test_input($_POST["account"]);
+        $account = test_input($_SESSION["use"]);
         $serviceType = test_input($_POST["serviceType"]);
         $startTime = test_input($_POST["startTime"]);
         $endTime = test_input($_POST["endTime"]);
