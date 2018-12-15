@@ -24,21 +24,30 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
         }
         $arr = $result->fetch_assoc();
         if (empty($arr)) {
-            echo "Account does not exist";
+            echo "Account does not exist \n";
         }
-        if($user == "Ank" && $pass == "1234")  // username is  set to "Ank"  and Password   
-        {                                   // is 1234 by default     
-
-        $_SESSION['use']=$user;
-
-        echo '<script type="text/javascript"> window.open("home.php","_self");</script>';            //  On Successful Login redirects to home.php
-
+        else if ($pass == $arr[0]) {
+            echo '<script type="text/javascript"> window.open("home.php","_self");</script>';
+            $_SESSION['use'] = $user;
         }
 
-        else
-        {
-            echo "invalid UserName or Password";        
+        else {
+            echo "Wrong password \n";
         }
+        
+        // if($user == "Ank" && $pass == "1234")  // username is  set to "Ank"  and Password   
+        // {                                   // is 1234 by default     
+
+        // $_SESSION['use']=$user;
+
+        //             //  On Successful Login redirects to home.php
+
+        // }
+
+        // else
+        // {
+        //     echo "invalid UserName or Password";        
+        // }
 }
 ?>
 <html>
