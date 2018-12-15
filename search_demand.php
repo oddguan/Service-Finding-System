@@ -82,7 +82,7 @@
     }
 
     function select_input() {
-        $result = $_GE['select'];
+        $result = $_GET['select'];
         $_SESSION['result'] = $result;
     }
 
