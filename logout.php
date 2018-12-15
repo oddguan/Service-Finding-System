@@ -3,5 +3,5 @@
 
   echo "Logout Successfully ";
   session_destroy();   // function that Destroys Session 
-  header("Location: Login.php");
+  header("Location: login.php");
 ?>
