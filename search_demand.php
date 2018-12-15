@@ -57,6 +57,7 @@
                 <th>End Time</th>
                 <th>Payment</th>
                 <th>Special Requirement</th>
+                <th>Select</th>
             </tr>
 
         <?php
@@ -68,6 +69,7 @@
 	            <td><?php echo $row['end_time']?></td>
 	            <td><?php echo $row['payment']?></td>
   	            <td><?php echo $row['special_requirement']?></td>
+                <td><a href="select_demand.php">select</a></td>
             </tr>
             
             <?php
