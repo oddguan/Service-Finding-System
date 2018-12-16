@@ -10,10 +10,7 @@
     {
         header("Location:login.php");  
     }
-
-        echo "<h1>Hello, " . $_SESSION['use'] . "</h1>";
         require_once("connect.php");
-
         $sql = "USE cguan3_1";
         $result = $mysqli->query($sql);
         // echo "database selected <br>";
@@ -25,15 +22,18 @@
         else {
             //echo "sucess";
             $arr = $result->fetch_assoc();
-            // print_r($arr);
+            $date = $arr['registration_date'];
+            $phone_number = $arr['phone_number'];
+            $first_name = $arr['first_name'];
         }
         // echo "Login Success";
+        echo "<h1>Hello, " . $first_name . "</h1>";
 
         echo "<a href='logout.php'> Logout</a> "; 
 ?>
 <p>
 <h2>Demander Utilities</h2>
-<a href="insert_demand.php">Post what a demand of service</a>
+<a href="insert_demand.php">Post a demand of service</a>
 <br>
 <br>
 <a href="search_supply.php">Search for a service supply</a>
