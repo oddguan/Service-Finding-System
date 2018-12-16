@@ -12,8 +12,10 @@
             echo $account;
             echo $start_time;
             echo $service_type;
-            echo "debug <br> <br>";
+            echo "<br><br> debug <br> <br>";
             echo $demand[0];
+            echo "<br><br> debug <br> <br>";
+            echo $demand;
             // require_once('connect.php');
             // $sql = "USE cguan3_1";
             // $result = $mysqli->query($sql);
