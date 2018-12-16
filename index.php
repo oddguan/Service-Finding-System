@@ -83,7 +83,7 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
 </form>
 <a href="register.php">Register New Account</a>
 <br>
-<a href="task_c.html">task c hyperlink</a>
+<a href="task_c.html">view all data (for admin to use)</a>
 
 </body>
 </html>
