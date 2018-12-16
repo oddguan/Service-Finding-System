@@ -45,6 +45,9 @@
     $sql = "USE cguan3_1;";
     $result = $mysqli->query($sql);
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (!preg_match("^([0-9]{2,4})-([0-1][0-9])-([0-3][0-9])(?:( [0-2][0-9]):([0-5][0-9]):([0-5][0-9]))?$", $startTime) or !preg_match("^([0-9]{2,4})-([0-1][0-9])-([0-3][0-9])(?:( [0-2][0-9]):([0-5][0-9]):([0-5][0-9]))?$", $endTime)){
+            $sql = "error";
+        }
         $sql = "INSERT INTO Demand VALUES (\"$account\",\"$serviceType\",\"$startTime\",\"$endTime\",\"$payment\",\"$specialRequirement\")";
         if (!$result = $mysqli->query($sql)) {
             // Oh no! The query failed. 
