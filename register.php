@@ -103,7 +103,7 @@
             echo "Query: " . $sql . "<br>\n";
             echo "Errno: " . $mysqli->errno . "<br>\n";
             echo "Error: " . $mysqli->error . "<br>\n";
-            exit;
+
         }
         else {
             echo "Registered Sucessfully.";
