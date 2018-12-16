@@ -23,9 +23,9 @@
             echo $mysql->error;
         }
         else {
-            echo "sucess";
+            //echo "sucess";
             $arr = $result->fetch_assoc();
-            print_r($arr);
+            // print_r($arr);
         }
         // echo "Login Success";
 
@@ -33,7 +33,6 @@
 ?>
 <p>
 <h2>Demander Utilities</h2>
-<br>
 <a href="insert_demand.php">Post what a demand of service</a>
 <br>
 <br>
