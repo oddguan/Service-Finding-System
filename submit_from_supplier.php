@@ -14,7 +14,7 @@
             require_once('connect.php');
             $sql = "USE cguan3_1";
             $result = $mysqli->query($sql);
-            $sql = "INSERT INTO Order_History VALUES(" . time() . "," . $_SESSION['use'] . "," . $account . "," . $start_time . "," . $service_type . "," . $payment . ")";
+            $sql = "INSERT INTO Order_History VALUES(\"" . time() . "\",\"" . $_SESSION['use'] . "\",\"" . $account . "\",\"" . $start_time . "\",\"" . $service_type . "\",\"" . $payment . "\")";
             if (!$result = $mysqli->query($sql)) {
                 // Oh no! The query failed. 
                 echo "Sorry, the website is experiencing problems.";
