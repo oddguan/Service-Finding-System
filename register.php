@@ -21,7 +21,7 @@
         First Name: <input type="text" name="firstName"> &nbsp;
         <span class="error">* <?php echo $firstNameErr;?></span>
         M.I.: <input type="text" name="MI" size=8>
-        Last Name: <input type="text" name="firstName">
+        Last Name: <input type="text" name="lastName">
         <span class="error">* <?php echo $lastNameErr;?></span>
         <br><br>
         <input type="submit" value="Submit">
@@ -44,6 +44,9 @@
 
         if (empty($_POST["password"])) {
             $passwordErr = "Password is required";
+        }
+        else if ($_POST["password"] == $_POST['password_2']) {
+            $passwordErr = "Passwords has to match";
         }
         else {
             $password = test_input($_POST["password"]);
