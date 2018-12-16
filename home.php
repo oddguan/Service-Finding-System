@@ -34,6 +34,8 @@
         echo "<a href='logout.php'> Logout</a> ";
 ?>
 <p>
+<a href="view_my_order.php">View my orders</a>
+<br>
 <h2>Demander Utilities</h2>
 <a href="insert_demand.php">Post a demand of service</a>
 <br>
