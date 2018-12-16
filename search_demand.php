@@ -70,7 +70,7 @@
 	            <td><?php echo $row['payment']?></td>
   	            <td><?php echo $row['special_requirement']?></td>
                 <td>
-                    <form method="get" action="submit.php">
+                    <form method="get" action="submit_from_supplier.php">
                     <button type="submit" name="select" value="<?= $row['account'],"*",$row['service_type'],"*",$row['start_time'],"*",$row['payment'] ?>">select</button>
                     </form>
                 </td>
