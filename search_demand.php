@@ -71,31 +71,14 @@
   	            <td><?php echo $row['special_requirement']?></td>
                 <td>
                     <form method="get" action="submit.php">
-                    <button type="submit" name="select" value="<?= $row['service_type'] ?>">select</button>
+                    <button type="submit" name="select" value="<?= $row['account'],$row['start_time'] ?>">select</button>
                     </form>
                 </td>
             </tr>
             
             <?php
-            $_SESSION["select"] = $_GET["select"];
             }
         }
-    }
-
-    function select_input() {
-    
-        if(!empty($result)){
-            echo "if";
-            echo $result;
-            print_r($result);
-        }
-        else {
-            echo 'else';
-            $result = $_GET['select'];
-            echo $result;
-            $_SESSION['result'] = $result;
-        }
-        
     }
 
     function test_input($data) {
