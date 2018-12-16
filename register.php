@@ -40,17 +40,17 @@
             $account = test_input($_POST["account"]);
             if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
                 $nameErr = "Only letters and white space allowed";
-                echo $nameErr; 
+                echo $nameErr . '<br>'; 
             }
         }
 
         if (empty($_POST["password"])) {
             $passwordErr = "Password is required";
-            echo $passwordErr;
+            echo $passwordErr . '<br>';
         }
         else if ($_POST["password"] != $_POST['password_2']) {
             $passwordErr = "Passwords has to match";
-            echo $passwordErr;
+            echo $passwordErr . '<br>';
         }
         else {
             $password = test_input($_POST["password"]);
@@ -58,7 +58,7 @@
 
         if (empty($_POST["password_2"])) {
             $passwordErr = "Password confirmation is required";
-            echo $passwordErr;
+            echo $passwordErr . '<br>';
         }
         else {
             $password_2 = test_input($_POST["password_2"]);
@@ -68,7 +68,7 @@
 
         if (empty($_POST["password"])) {
             $passwordErr = "Password is required";
-            echo $passwordErr;
+            echo $passwordErr . '<br>';
         }
         else {
             $password = test_input($_POST["password"]);
@@ -76,6 +76,7 @@
 
         if (empty($_POST["firstName"])) {
             $firstNameErr = "First name is required";
+            echo $firstNameErr . '<br>';
         }
         else {
             $firstName = test_input($_POST["firstName"]);
@@ -85,6 +86,7 @@
 
         if (empty($_POST["lastName"])) {
             $lastNameErr = "Last name is required";
+            echo $lastNameErr . '<br>';
         }
         else {
             $lastName = test_input($_POST["lastName"]);
