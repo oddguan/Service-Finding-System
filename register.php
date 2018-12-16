@@ -34,19 +34,23 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["account"])) {
             $accountErr = "Account is required";
+            echo $accountErr;
         } 
         else {
             $account = test_input($_POST["account"]);
             if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-                $nameErr = "Only letters and white space allowed"; 
+                $nameErr = "Only letters and white space allowed";
+                echo $nameErr; 
             }
         }
 
         if (empty($_POST["password"])) {
             $passwordErr = "Password is required";
+            echo $passwordErr;
         }
         else if ($_POST["password"] != $_POST['password_2']) {
             $passwordErr = "Passwords has to match";
+            echo $passwordErr;
         }
         else {
             $password = test_input($_POST["password"]);
@@ -54,6 +58,7 @@
 
         if (empty($_POST["password_2"])) {
             $passwordErr = "Password confirmation is required";
+            echo $passwordErr;
         }
         else {
             $password_2 = test_input($_POST["password_2"]);
@@ -63,6 +68,7 @@
 
         if (empty($_POST["password"])) {
             $passwordErr = "Password is required";
+            echo $passwordErr;
         }
         else {
             $password = test_input($_POST["password"]);
@@ -87,7 +93,7 @@
     $sql = "USE cguan3_1;";
     $result = $mysqli->query($sql);
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if ($firstName != "" and $lastName != "") {
+        if ($firstName != "" or $lastName != "" or ) {
             $sql = "INSERT INTO Registration VALUES (\"$account\",\"$password\",NOW(),\"$phoneNumber\",\"$firstName\",\"$MI\",\"$lastName\")";
         }
         else {
