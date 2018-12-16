@@ -10,8 +10,8 @@
             $account = $arr[0];
             $service_type = $arr[1];
             $salary_requirement = $arr[2];
-            $start_time = $arr[2];
-            $end_time = $arr[3];
+            $start_time = $arr[3];
+            $end_time = $arr[4];
             require_once('connect.php');
             $sql = "USE cguan3_1";
             $result = $mysqli->query($sql);
