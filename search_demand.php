@@ -71,7 +71,7 @@
   	            <td><?php echo $row['special_requirement']?></td>
                 <td>
                     <form method="get" action="submit.php">
-                    <button type="submit" name="select" value="<?= $row['account'],$row['start_time'] ?>">select</button>
+                    <button type="submit" name="select" value="<?= $row['account'],$row['service_type'],$row['start_time'],$row['payment'] ?>">select</button>
                     </form>
                 </td>
             </tr>
