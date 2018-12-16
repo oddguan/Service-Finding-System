@@ -5,6 +5,8 @@
 
     <body>
         <?php
+            echo $_GET['select'];
+            print_r($_GET['select']);
             echo "<h2>Service Successfully Selected!</h2><br>";
             $result = $_SESSION['select'];
             echo $result;
