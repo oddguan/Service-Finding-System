@@ -11,9 +11,9 @@
         Account: <input type="text" name="account">
         <span class="error">* <?php echo $accountErr;?></span>
         <br><br>
-        Password: <input type="text" name="password">
+        Password: <input type="password" name="password">
         <br><br>
-        Retype Password: <input type="text" name="password_2">
+        Retype Password: <input type="password" name="password_2">
         <span class="error">* <?php echo $passwordErr;?></span>
         <br><br>
         Phone Number: <input type="text" name="phoneNumber">
