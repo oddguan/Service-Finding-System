@@ -25,11 +25,13 @@
             $date = $arr['registration_date'];
             $phone_number = $arr['phone_number'];
             $first_name = $arr['first_name'];
+            $last_name = $arr['last_name'];
         }
         // echo "Login Success";
         echo "<h1>Hello, " . $first_name . "</h1>";
-
-        echo "<a href='logout.php'> Logout</a> "; 
+        echo "phone number: " . $phone_number . "<br>";
+        echo "last name: " . $last_name . "<br>";
+        echo "<a href='logout.php'> Logout</a> ";
 ?>
 <p>
 <h2>Demander Utilities</h2>
