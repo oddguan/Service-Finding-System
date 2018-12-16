@@ -34,7 +34,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (empty($_POST["account"])) {
             $accountErr = "Account is required";
-            echo $accountErr;
+            echo $accountErr . '<br>';
         } 
         else {
             $account = test_input($_POST["account"]);

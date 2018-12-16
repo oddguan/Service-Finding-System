@@ -11,7 +11,12 @@
 <body>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <br><br>
-        Service Type: <input type="text" name="serviceType">
+        Service Type: 
+        <select name="serviceType">
+            <option value="House_Cleaning">house cleaning</option>
+            <option value="Babysitting">babysitting</option>
+            <option value="Lawn_Trimming">lawn trimming</option>
+        </select>
         <span class="error">* <?php echo $startTimeErr;?></span>
         <br><br>
         Start Time: <input type="text" name="startTime"> &nbsp;
