@@ -31,10 +31,10 @@
     $result = $mysqli->query($sql);
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_POST['service'] == "any") {
-            $sql = "SELECT * FROM Supply WHERE account!=" . $_SESSION['use'] . "\"";
+            $sql = "SELECT * FROM Supply WHERE account!=\"" . $_SESSION['use'] . "\"";
         }
         else {
-            $sql = "SELECT * FROM Supply WHERE service_type=\"" . $service .  "\"" . "AND account!=" . $_SESSION['use'] . "\"";
+            $sql = "SELECT * FROM Supply WHERE service_type=\"" . $service .  "\"" . "AND account!=\"" . $_SESSION['use'] . "\"";
         }
         if (!$result = $mysqli->query($sql)) {
             // Oh no! The query failed. 
