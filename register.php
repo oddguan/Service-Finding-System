@@ -95,7 +95,7 @@
         }
         if (!$result = $mysqli->query($sql)) {
             // Oh no! The query failed. 
-            echo "Sorry, the website is experiencing problems. <br>";
+            echo "Sorry, something is missing. <br>";
         
             // Again, do not do this on a public site, but we'll show you how
             // to get the error information
