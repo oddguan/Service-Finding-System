@@ -68,8 +68,8 @@
 	            <td><?php echo $row['start_time']?></td>
 	            <td><?php echo $row['end_time']?></td>
                 <td>
-                    <form method="get" action="submit.php">
-                    <button type="submit" name="select" value="<?= $row ?>">select</button>
+                    <form method="get" action="submit_from_supplier.php">
+                    <button type="submit" name="select" value="<?= $row['account'],"*",$row['service_type'],"*",$row['salary_requirement'],"*",$row['start_time'],"*",$row['end_time'] ?>">select</button>
                     </form>
                 </td>
             </tr>
