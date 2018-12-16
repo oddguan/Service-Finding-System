@@ -48,12 +48,13 @@
             $passwordErr = "Password is required";
             echo $passwordErr . '<br>';
         }
-        else if ($_POST["password"] != $_POST['password_2']) {
-            $passwordErr = "Passwords has to match";
-            echo $passwordErr . '<br>';
-        }
         else {
             $password = test_input($_POST["password"]);
+        }
+
+        if ($_POST["password"] != $_POST['password_2']) {
+            $passwordErr = "Passwords has to match";
+            echo $passwordErr . '<br>';
         }
 
         if (empty($_POST["password_2"])) {
@@ -95,7 +96,7 @@
     $sql = "USE cguan3_1;";
     $result = $mysqli->query($sql);
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if ($firstName != "" or $lastName != "" ) {
+        if ($firstName != "" or $lastName != "" or $_POST["password"] != $_POST['password_2']) {
             $sql = "INSERT INTO Registration VALUES (\"$account\",\"$password\",NOW(),\"$phoneNumber\",\"$firstName\",\"$MI\",\"$lastName\")";
         }
         else {
