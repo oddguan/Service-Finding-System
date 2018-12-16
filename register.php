@@ -93,7 +93,7 @@
     $sql = "USE cguan3_1;";
     $result = $mysqli->query($sql);
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if ($firstName != "" or $lastName != "" or ) {
+        if ($firstName != "" or $lastName != "" ) {
             $sql = "INSERT INTO Registration VALUES (\"$account\",\"$password\",NOW(),\"$phoneNumber\",\"$firstName\",\"$MI\",\"$lastName\")";
         }
         else {
