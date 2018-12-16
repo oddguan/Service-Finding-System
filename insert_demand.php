@@ -50,7 +50,10 @@
         ", $endTime)){
             $sql = "error";
         }
-        $sql = "INSERT INTO Demand VALUES (\"$account\",\"$serviceType\",\"$startTime\",\"$endTime\",\"$payment\",\"$specialRequirement\")";
+        else {
+            $sql = "INSERT INTO Demand VALUES (\"$account\",\"$serviceType\",\"$startTime\",\"$endTime\",\"$payment\",\"$specialRequirement\")";
+        }
+
         if (!$result = $mysqli->query($sql)) {
             // Oh no! The query failed. 
             echo "Sorry, the website is experiencing problems. <br>";
