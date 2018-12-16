@@ -18,7 +18,7 @@
         <br><br>
         Phone Number: <input type="text" name="phoneNumber">
         <br><br>
-        First Name: <input type="text" name="firstName"> &nbsp;
+        First Name: <input type="text" name="firstName">
         <span class="error">* <?php echo $firstNameErr;?></span>
         M.I.: <input type="text" name="MI" size=8>
         Last Name: <input type="text" name="lastName">
@@ -45,7 +45,7 @@
         if (empty($_POST["password"])) {
             $passwordErr = "Password is required";
         }
-        else if ($_POST["password"] == $_POST['password_2']) {
+        else if ($_POST["password"] != $_POST['password_2']) {
             $passwordErr = "Passwords has to match";
         }
         else {
@@ -78,7 +78,7 @@
         $MI = test_input($_POST["MI"]);
 
         if (empty($_POST["lastName"])) {
-            $firstNameErr = "Last name is required";
+            $lastNameErr = "Last name is required";
         }
         else {
             $lastName = test_input($_POST["lastName"]);
@@ -87,7 +87,12 @@
     $sql = "USE cguan3_1;";
     $result = $mysqli->query($sql);
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $sql = "INSERT INTO Registration VALUES (\"$account\",\"$password\",NOW(),\"$phoneNumber\",\"$firstName\",\"$MI\",\"$lastName\")";
+        if ($firstName != "" and $lastName != "") {
+            $sql = "INSERT INTO Registration VALUES (\"$account\",\"$password\",NOW(),\"$phoneNumber\",\"$firstName\",\"$MI\",\"$lastName\")";
+        }
+        else {
+            $sql = "error";
+        }
         if (!$result = $mysqli->query($sql)) {
             // Oh no! The query failed. 
             echo "Sorry, the website is experiencing problems. <br>";
